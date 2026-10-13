@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sherazi Solutions - Your Mobile Software Experts</title>
+  <meta name="description" content="Professional mobile software recovery and flashing services in Pakistan. Dead boot repair, FRP bypass, rooting, IMEI repair, and firmware flashing.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#060913',
+              surface: '#0b1120',
+              card: '#111b2e',
+              cyan: '#06b6d4',
+              neonCyan: '#22d3ee',
+              emerald: '#10b981',
+              neonGreen: '#34d399',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#060913] text-slate-100 min-h-screen cyber-grid-bg relative selection:bg-cyan-500 selection:text-black">
+
+  <!-- Ambient Glow Gradients -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] radial-glow-cyan pointer-events-none -z-10"></div>
+  <div class="fixed top-1/3 right-0 w-[600px] h-[600px] radial-glow-green pointer-events-none -z-10"></div>
+
+  <!-- Header / Navigation -->
+  <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-emerald-500 p-0.5 shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-400/40 transition-shadow">
+            <div class="w-full h-full bg-[#060913] rounded-[10px] flex items-center justify-center">
+              <svg class="w-5 h-5 text-cyan-400 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <span class="text-xl font-extrabold tracking-tight text-white block">
+              SHERAZI <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">SOLUTIONS</span>
+            </span>
+            <span class="text-[10px] uppercase font-mono-tech tracking-widest text-cyan-400/80 -mt-1 block">
+              Mobile Software Lab
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#hero" class="hover:text-cyan-400 transition-colors">Home</a>
+          <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
+          <a href="#price-checker" class="hover:text-cyan-400 transition-colors">Price Checker</a>
+          <a href="#how-it-works" class="hover:text-cyan-400 transition-colors">How It Works</a>
+          <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Quick Actions -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a 
+            href="#contact" 
+            class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-700 hover:border-cyan-500/50 text-slate-200 hover:text-white transition-all shadow-sm"
+          >
+            Get a Quote
+          </a>
+          <a 
+            href="https://wa.me/923001234567?text=Hello%20Sherazi%20Solutions!%20I%20need%20assistance%20with%20mobile%20software%20service." 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="btn-whatsapp px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.771.88 2.796.88 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.767-5.767-5.767zm0 10.42c-.933 0-1.748-.28-2.548-.82l-.183-.124-1.579.414.421-1.54-.121-.192c-.595-.945-.91-1.666-.91-2.592 0-2.617 2.128-4.746 4.75-4.746 2.622 0 4.747 2.129 4.747 4.75 0 2.621-2.125 4.746-4.747 4.746z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <div class="md:hidden flex items-center gap-2">
+          <a 
+            href="https://wa.me/923001234567?text=Hello%20Sherazi%20Solutions!" 
+            target="_blank" 
+            class="btn-whatsapp p-2 rounded-lg text-xs" 
+            aria-label="WhatsApp quick chat"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.771.88 2.796.88 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.767-5.767-5.767zm0 10.42c-.933 0-1.748-.28-2.548-.82l-.183-.124-1.579.414.421-1.54-.121-.192c-.595-.945-.91-1.666-.91-2.592 0-2.617 2.128-4.746 4.75-4.746 2.622 0 4.747 2.129 4.747 4.75 0 2.621-2.125 4.746-4.747 4.746z"/>
+            </svg>
+          </a>
+          <button 
+            id="mobile-menu-btn" 
+            type="button" 
+            class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none" 
+            aria-label="Toggle Navigation Menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0a0f1e]/95 backdrop-blur-xl border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
+      <a href="#hero" class="nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium">Home</a>
+      <a href="#services" class="nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium">Services & Pricing</a>
+      <a href="#price-checker" class="nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium">Price Calculator</a>
+      <a href="#how-it-works" class="nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium">How It Works</a>
+      <a href="#contact" class="nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium">Contact & Support</a>
+      
+      <div class="pt-3 border-t border-slate-800/80 flex flex-col gap-2">
+        <a href="#contact" class="nav-link text-center py-2.5 rounded-xl text-sm font-semibold bg-slate-800 border border-slate-700 text-white">
+          Get a Quote
+        </a>
+        <a 
+          href="https://wa.me/923001234567?text=Hello%20Sherazi%20Solutions!%20I%20need%20assistance%20with%20mobile%20software%20service." 
+          target="_blank" 
+          class="btn-whatsapp text-center py-2.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.771.88 2.796.88 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.767-5.767-5.767zm0 10.42c-.933 0-1.748-.28-2.548-.82l-.183-.124-1.579.414.421-1.54-.121-.192c-.595-.945-.91-1.666-.91-2.592 0-2.617 2.128-4.746 4.75-4.746 2.622 0 4.747 2.129 4.747 4.75 0 2.621-2.125 4.746-4.747 4.746z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section id="hero" class="pt-32 pb-20 sm:pt-40 sm:pb-28 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <!-- Hero Left Column: Text & CTAs -->
+          <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+            
+            <!-- Tech Status Badge -->
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-cyan-300 text-xs font-mono-tech shadow-lg shadow-cyan-950/40">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 tech-pulse"></span>
+              <span>EXPERT LAB ONLINE &bull; EXPRESS TURNAROUND</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              Sherazi Solutions - <br class="hidden sm:inline" />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 glow-text-cyan">
+                Your Mobile Software Experts
+              </span>
+            </h1>
+
+            <!-- Description -->
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Stuck on bootloop? Dead boot after bad flash? FRP locked? We provide precision firmware flashing, Magisk rooting, IMEI repair, and lock bypass for Samsung, Xiaomi, iPhone, Oppo, Vivo, Infinix & Tecno.
+            </p>
+
+            <!-- Dual Primary CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+              <a 
+                href="#contact" 
+                class="w-full sm:w-auto gradient-btn-primary px-8 py-3.5 rounded-xl text-sm font-bold flex items-center justify-center gap-2"
+              >
+                <span>Get a Quote</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+
+              <a 
+                href="https://wa.me/923001234567?text=Hello%20Sherazi%20Solutions!%20I%20have%20an%20urgent%20mobile%20software%20issue." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto btn-whatsapp px-7 py-3.5 rounded-xl text-sm font-bold flex items-center justify-center gap-2.5"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.771.88 2.796.88 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.767-5.767-5.767zm0 10.42c-.933 0-1.748-.28-2.548-.82l-.183-.124-1.579.414.421-1.54-.121-.192c-.595-.945-.91-1.666-.91-2.592 0-2.617 2.128-4.746 4.75-4.746 2.622 0 4.747 2.129 4.747 4.75 0 2.621-2.125 4.746-4.747 4.746z"/>
+                </svg>
+                <span>WhatsApp Instant Chat</span>
+              </a>
+            </div>
+
+            <!-- Trust / Feature Metrics -->
+            <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800/80 text-left">
+              <div>
+                <p class="text-xl sm:text-2xl font-bold font-mono-tech text-cyan-400">100%</p>
+                <p class="text-xs text-slate-400">Software Safe</p>
+              </div>
+              <div>
+                <p class="text-xl sm:text-2xl font-bold font-mono-tech text-emerald-400">30 Min</p>
+                <p class="text-xs text-slate-400">Fast Turnaround</p>
+              </div>
+              <div>
+                <p class="text-xl sm:text-2xl font-bold font-mono-tech text-cyan-400">8+ Brands</p>
+                <p class="text-xs text-slate-400">Full Support</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Right Column: Cyber Diagnostic Terminal Card -->
+          <div class="lg:col-span-5">
+            <div class="relative scanline-effect rounded-2xl p-1 bg-gradient-to-b from-cyan-500/30 via-slate-800 to-emerald-500/20 shadow-2xl shadow-cyan-950/50">
+              <div class="bg-[#0b1120] rounded-[15px] p-6 space-y-4 border border-slate-800">
+                
+                <!-- Terminal Header Bar -->
+                <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                    <span class="ml-2 text-xs font-mono-tech text-slate-400">sherazi-flasher.exe v4.2</span>
+                  </div>
+                  <span class="text-[11px] font-mono-tech px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-400 border border-emerald-800/40">
+                    PORT_COM9: CONNECTED
+                  </span>
+                </div>
+
+                <!-- Terminal Diagnostic Logs -->
+                <div class="space-y-2 text-xs font-mono-tech text-slate-300">
+                  <p class="text-slate-500"># Initializing Qualcomm EDL / MediaTek BROM handshakes...</p>
+                  <p class="text-cyan-400">&gt; Target: Snapdragon / MediaTek / Knox Chipset detected</p>
+                  <p class="text-emerald-400">&gt; Partition Health: Checking Boot, System, Vendor, EFS...</p>
+                  <p class="text-slate-300">&gt; Status: Ready for Stock ROM Flashing &amp; FRP Unlock</p>
+                </div>
+
+                <!-- Live Status Card -->
+                <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
+                  <div class="flex items-center justify-between text-xs">
+                    <span class="text-slate-400 font-mono-tech">Diagnostic Check</span>
+                    <span class="text-emerald-400 font-semibold font-mono-tech">PASSED (10/10)</span>
+                  </div>
+                  <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div class="bg-gradient-to-r from-cyan-400 to-emerald-400 h-full w-full"></div>
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] text-slate-400">
+                    <span>Samsung &bull; Xiaomi &bull; iPhone</span>
+                    <span class="text-cyan-300 font-mono-tech">No Board Damage</span>
+                  </div>
+                </div>
+
+                <!-- Fast link to price checker -->
+                <a 
+                  href="#price-checker" 
+                  class="block w-full text-center py-2.5 rounded-lg bg-cyan-950/50 hover:bg-cyan-900/70 border border-cyan-800/50 text-cyan-300 text-xs font-semibold font-mono-tech transition-colors"
+                >
+                  &rarr; RUN PRICE ESTIMATOR FOR YOUR MODEL
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: SERVICES GRID -->
+    <section id="services" class="py-20 bg-[#080d1a] border-y border-slate-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs font-mono-tech mb-3">
+            <span>FULL SOFTWARE CAPABILITIES</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Comprehensive Mobile Software Services
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-3">
+            Transparent pricing, high-speed flashing, and zero hardware tampering. Select any service to estimate repair costs or book an express slot.
+          </p>
+
+          <!-- Filter Pills -->
+          <div class="flex flex-wrap items-center justify-center gap-2 mt-6">
+            <button 
+              onclick="filterServices('all')" 
+              data-category="all" 
+              class="service-filter-btn px-4 py-1.5 rounded-full text-xs font-mono-tech font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 transition-all"
+            >
+              All Services (10)
+            </button>
+            <button 
+              onclick="filterServices('system')" 
+              data-category="system" 
+              class="service-filter-btn px-4 py-1.5 rounded-full text-xs font-mono-tech font-semibold bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all"
+            >
+              ROM &amp; Flashing
+            </button>
+            <button 
+              onclick="filterServices('repair')" 
+              data-category="repair" 
+              class="service-filter-btn px-4 py-1.5 rounded-full text-xs font-mono-tech font-semibold bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all"
+            >
+              Boot &amp; Unbricking
+            </button>
+            <button 
+              onclick="filterServices('unlock')" 
+              data-category="unlock" 
+              class="service-filter-btn px-4 py-1.5 rounded-full text-xs font-mono-tech font-semibold bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all"
+            >
+              FRP &amp; Screen Unlock
+            </button>
+            <button 
+              onclick="filterServices('modding')" 
+              data-category="modding" 
+              class="service-filter-btn px-4 py-1.5 rounded-full text-xs font-mono-tech font-semibold bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all"
+            >
+              Root &amp; Recovery
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Services Cards Grid (Rendered via app.js) -->
+        <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Banner note under services -->
+        <div class="mt-12 p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3 text-left">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+            <p class="text-xs sm:text-sm text-slate-300">
+              Have an uncommon model or custom issue not listed? We support over 4,000+ Android &amp; iOS devices.
+            </p>
+          </div>
+          <a 
+            href="#contact" 
+            class="text-xs font-semibold font-mono-tech text-cyan-400 hover:text-emerald-400 underline underline-offset-4 whitespace-nowrap"
+          >
+            Ask a Technician Directly &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: PRICE CHECKER -->
+    <section id="price-checker" class="py-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-emerald-500/30 text-emerald-300 text-xs font-mono-tech mb-3">
+              <span>INTERACTIVE COST ESTIMATOR</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Instant Device Price Checker
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-2">
+              Select your mobile brand and the required software repair to view the estimated turnaround and price bracket.
+            </p>
+          </div>
+
+          <!-- Calculator Container Card -->
+          <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl relative">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              
+              <!-- Dropdowns Column -->
+              <div class="space-y-5">
+                <div>
+                  <label for="calc-brand" class="block text-xs font-mono-tech font-bold text-slate-300 uppercase tracking-wider mb-2">
+                    1. Select Brand
+                  </label>
+                  <div class="relative">
+                    <select 
+                      id="calc-brand" 
+                      class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3.5 text-white font-medium focus:outline-none focus:border-cyan-400 transition-colors appearance-none cursor-pointer"
+                    >
+                      <option value="samsung">Samsung (Galaxy S, Note, A, M, Z Series)</option>
+                      <option value="xiaomi">Xiaomi (Redmi, Poco, Mi Series)</option>
+                      <option value="oppo">Oppo (Find, Reno, A Series)</option>
+                      <option value="vivo">Vivo (X, V, Y, T Series)</option>
+                      <option value="infinix">Infinix (Zero, Note, Hot, Smart Series)</option>
+                      <option value="tecno">Tecno (Camon, Pova, Spark Series)</option>
+                      <option value="realme">Realme (GT, Number, C, Narzo Series)</option>
+                      <option value="iphone">iPhone (Apple iOS 12 - iOS 18)</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="calc-service" class="block text-xs font-mono-tech font-bold text-slate-300 uppercase tracking-wider mb-2">
+                    2. Select Software Service
+                  </label>
+                  <div class="relative">
+                    <select 
+                      id="calc-service" 
+                      class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3.5 text-white font-medium focus:outline-none focus:border-cyan-400 transition-colors appearance-none cursor-pointer"
+                    >
+                      <!-- Populated dynamically via app.js -->
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Chipsets Supported Badge -->
+                <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 flex items-center gap-3">
+                  <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                  </svg>
+                  <span>Supported Chipsets: Qualcomm Snapdragon, MediaTek (MTK), Exynos, UniSoC, Apple Bionic.</span>
+                </div>
+              </div>
+
+              <!-- Live Estimate Output Column -->
+              <div class="rounded-2xl bg-slate-900/90 border border-cyan-500/30 p-6 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono-tech uppercase text-slate-400">Estimated Price Bracket</span>
+                    <span class="text-[11px] font-mono-tech px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/40">
+                      Tested Rates
+                    </span>
+                  </div>
+
+                  <!-- Price Display -->
+                  <div>
+                    <div id="calc-result-price" class="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 font-mono-tech">
+                      PKR 800 - 2,000
+                    </div>
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-xs text-slate-400 font-mono-tech">
+                      <span>Brand: <strong id="calc-result-brand" class="text-white">Samsung</strong></span>
+                      <span>&bull;</span>
+                      <span>Service: <strong id="calc-result-service" class="text-cyan-400">Flashing</strong></span>
+                      <span>&bull;</span>
+                      <span>Turnaround: <strong id="calc-result-time" class="text-emerald-400">30 - 45 mins</strong></span>
+                    </div>
+                  </div>
+
+                  <!-- Technical Note -->
+                  <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+                    <span class="text-[10px] font-mono-tech uppercase tracking-wider text-cyan-400 block mb-1">
+                      Technical Scope:
+                    </span>
+                    <p id="calc-result-note" class="text-xs text-slate-300 leading-relaxed">
+                      Official Odin multi-file flashing with PIT partition verification.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Calculator Action Buttons -->
+                <div class="pt-6 space-y-2.5">
+                  <a 
+                    id="calc-wa-btn" 
+                    href="#" 
+                    target="_blank" 
+                    class="btn-whatsapp w-full py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2"
+                  >
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.771.88 2.796.88 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.767-5.767-5.767zm0 10.42c-.933 0-1.748-.28-2.548-.82l-.183-.124-1.579.414.421-1.54-.121-.192c-.595-.945-.91-1.666-.91-2.592 0-2.617 2.128-4.746 4.75-4.746 2.622 0 4.747 2.129 4.747 4.75 0 2.621-2.125 4.746-4.747 4.746z"/>
+                    </svg>
+                    <span>Book This Service via WhatsApp</span>
+                  </a>
+
+                  <button 
+                    id="calc-quote-btn" 
+                    type="button" 
+                    class="w-full py-2.5 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
+                  >
+                    Transfer to Contact Form &darr;
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: HOW IT WORKS -->
+    <section id="how-it-works" class="py-20 bg-[#080d1a] border-y border-slate-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs font-mono-tech mb-3">
+            <span>SEAMLESS WORKFLOW</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            How It Works in 3 Simple Steps
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Getting your phone restored is straightforward and risk-free.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          
+          <!-- Step 1 -->
+          <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-3xl font-black font-mono-tech text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                  01
+                </span>
+                <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-cyan-400 group-hover:border-cyan-400 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-3">
+                Send Device Details
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Provide your phone brand, exact model number, and describe what happened (e.g., failed update, bootloop, password lock, or blank screen).
+              </p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-800/80 text-xs font-mono-tech text-cyan-400">
+              &bull; Via WhatsApp or Quick Form
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-3xl font-black font-mono-tech text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                  02
+                </span>
+                <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-emerald-400 group-hover:border-emerald-400 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-3">
+                Get a Quote
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                We review the exact firmware version and security patch level, and send you a transparent, fixed price quote with no surprise fees.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800/80 text-xs font-mono-tech text-emerald-400">
+              &bull; 100% Upfront Estimation
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-3xl font-black font-mono-tech text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                  03
+                </span>
+                <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-cyan-400 group-hover:border-cyan-400 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-3">
+                Fast Service
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Bring your device to our lab or connect remotely via USB. We flash official stock firmware, verify hardware diagnostics, and return your phone working.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800/80 text-xs font-mono-tech text-cyan-400">
+              &bull; Same-Day Turnaround
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: CONTACT FORM & WHATSAPP -->
+    <section id="contact" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Contact Left: Direct WhatsApp Banner & Shop Details -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs font-mono-tech mb-3">
+                <span>CONNECT WITH US</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                Request a Quick Quote
+              </h2>
+              <p class="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
+                Got a phone that won't turn on or need an instant unlock quote? Fill out the quick form or reach out directly on WhatsApp for priority service.
+              </p>
+            </div>
+
+            <!-- WhatsApp Click-to-Chat Dedicated Card -->
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-emerald-950/60 to-slate-900 border border-emerald-500/40 shadow-xl space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-[#25D366] flex items-center justify-center text-white shrink-0 shadow-lg shadow-emerald-500/30">
+                  <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.771.88 2.796.88 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.767-5.767-5.767zm0 10.42c-.933 0-1.748-.28-2.548-.82l-.183-.124-1.579.414.421-1.54-.121-.192c-.595-.945-.91-1.666-.91-2.592 0-2.617 2.128-4.746 4.75-4.746 2.622 0 4.747 2.129 4.747 4.75 0 2.621-2.125 4.746-4.747 4.746z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-bold text-base">Direct WhatsApp Line</h3>
+                  <p class="text-emerald-400 text-xs font-mono-tech">Response time: Usually &lt; 5 mins</p>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-xs leading-relaxed">
+                Send photos of your screen error or fastboot/recovery menu directly to our technician for rapid troubleshooting.
+              </p>
+
+              <a 
+                href="https://wa.me/923001234567?text=Hello%20Sherazi%20Solutions!%20I%20need%20help%20with%20my%20phone%20software." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="btn-whatsapp w-full py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2"
+              >
+                <span>Click to Chat: <span class="wa-display-number">+92 300 1234567</span></span>
+              </a>
+            </div>
+
+            <!-- Shop Info Points -->
+            <div class="space-y-3 text-xs text-slate-300 font-mono-tech">
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <svg class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <div>
+                  <span class="text-slate-500 block">LAB LOCATION:</span>
+                  <span class="shop-address text-white">Shop #14, Bilal Mobile Center, Hall Road, Lahore, Pakistan</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div>
+                  <span class="text-slate-500 block">SERVICE HOURS:</span>
+                  <span class="shop-hours text-white">Monday - Saturday: 11:00 AM - 9:00 PM (Sunday Closed)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Right: Form -->
+          <div class="lg:col-span-7">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-700/80 shadow-2xl relative">
+              
+              <h3 class="text-xl font-bold text-white mb-2">Send Device Diagnostic Ticket</h3>
+              <p class="text-xs text-slate-400 mb-6">Submit this form to receive a ticket or dispatch directly to WhatsApp.</p>
+
+              <form id="service-contact-form" class="space-y-4">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-name" class="block text-xs font-mono-tech text-slate-300 mb-1.5">
+                      Your Name *
+                    </label>
+                    <input 
+                      type="text" 
+                      id="contact-name" 
+                      required 
+                      placeholder="e.g. Ali Raza"
+                      class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
+                    >
+                  </div>
+
+                  <div>
+                    <label for="contact-phone" class="block text-xs font-mono-tech text-slate-300 mb-1.5">
+                      Phone / WhatsApp Number *
+                    </label>
+                    <input 
+                      type="tel" 
+                      id="contact-phone" 
+                      required 
+                      placeholder="e.g. 0300-1234567"
+                      class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
+                    >
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-model" class="block text-xs font-mono-tech text-slate-300 mb-1.5">
+                    Phone Brand &amp; Exact Model *
+                  </label>
+                  <input 
+                    type="text" 
+                    id="contact-model" 
+                    required 
+                    placeholder="e.g. Samsung Galaxy A52 / Redmi Note 12 / iPhone 13"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
+                  >
+                </div>
+
+                <div>
+                  <label for="contact-issue" class="block text-xs font-mono-tech text-slate-300 mb-1.5">
+                    Describe the Issue / Service Needed *
+                  </label>
+                  <textarea 
+                    id="contact-issue" 
+                    rows="4" 
+                    required 
+                    placeholder="e.g. Phone is stuck on boot logo after an update. Need stock ROM flash and data preservation if possible."
+                    class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+                  ></textarea>
+                </div>
+
+                <!-- Action Buttons: Submit or Send to WhatsApp -->
+                <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                  <button 
+                    type="submit" 
+                    class="w-full sm:w-1/2 gradient-btn-primary py-3.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <span>Submit Inquiry</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                  </button>
+
+                  <button 
+                    type="button" 
+                    id="contact-wa-direct-btn"
+                    class="w-full sm:w-1/2 btn-whatsapp py-3.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.771.88 2.796.88 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.767-5.767-5.767zm0 10.42c-.933 0-1.748-.28-2.548-.82l-.183-.124-1.579.414.421-1.54-.121-.192c-.595-.945-.91-1.666-.91-2.592 0-2.617 2.128-4.746 4.75-4.746 2.622 0 4.747 2.129 4.747 4.75 0 2.621-2.125 4.746-4.747 4.746z"/>
+                    </svg>
+                    <span>Send via WhatsApp</span>
+                  </button>
+                </div>
+
+                <p class="text-[11px] text-slate-500 text-center font-mono-tech mt-2">
+                  🔒 We never share your phone number. No spam guaranteed.
+                </p>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 6: FOOTER -->
+  <footer class="bg-[#04060d] border-t border-slate-800/80 pt-16 pb-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-slate-800/80">
+        
+        <!-- Brand column -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-emerald-500 p-0.5">
+              <div class="w-full h-full bg-[#060913] rounded-[6px] flex items-center justify-center">
+                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+            </div>
+            <span class="text-lg font-extrabold text-white">Sherazi Solutions</span>
+          </div>
+
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Specialized mobile device software laboratory providing high-performance OS recovery, bootloop diagnostics, and unlock solutions.
+          </p>
+
+          <div class="inline-flex items-center gap-2 text-xs font-mono-tech text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>Online Support Ready</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-mono-tech font-bold uppercase tracking-wider text-slate-200">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">Home / Overview</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">10 Software Services</a></li>
+            <li><a href="#price-checker" class="hover:text-cyan-400 transition-colors">Interactive Price Estimator</a></li>
+            <li><a href="#how-it-works" class="hover:text-cyan-400 transition-colors">How It Works (3 Steps)</a></li>
+            <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Brands Supported -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-mono-tech font-bold uppercase tracking-wider text-slate-200">Brands Serviced</h4>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono-tech text-slate-400">
+            <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800">Samsung</span>
+            <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800">Xiaomi</span>
+            <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800">iPhone</span>
+            <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800">Oppo</span>
+            <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800">Vivo</span>
+            <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800">Infinix</span>
+            <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800">Tecno</span>
+            <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800">Realme</span>
+          </div>
+        </div>
+
+        <!-- Lab Address & Hours -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-mono-tech font-bold uppercase tracking-wider text-slate-200">Shop &amp; Working Hours</h4>
+          <p class="text-xs text-slate-300">
+            <strong class="text-white block">Address:</strong>
+            <span class="shop-address">Shop #14, Bilal Mobile Center, Hall Road, Lahore, Pakistan</span>
+          </p>
+          <p class="text-xs text-slate-300">
+            <strong class="text-white block">Operating Hours:</strong>
+            <span class="shop-hours">Monday - Saturday: 11:00 AM - 9:00 PM (Sunday Closed)</span>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Mandatory Disclaimer & Copyright -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+        <div class="space-y-1">
+          <p class="text-xs font-medium text-amber-400 font-mono-tech">
+            &bull; Disclaimer: Prices are estimates and may vary by model.
+          </p>
+          <p class="text-[11px] text-slate-500">
+            &copy; 2026 Sherazi Solutions. All trademarks and brand names belong to their respective owners. Test build with sample data.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4 text-xs font-mono-tech text-slate-400">
+          <a href="#hero" class="hover:text-cyan-400 transition-colors">Back to Top &uarr;</a>
+          <span>&bull;</span>
+          <a href="https://wa.me/923001234567" target="_blank" class="hover:text-emerald-400 transition-colors">WhatsApp Support</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Sticky WhatsApp Widget -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a 
+      href="https://wa.me/923001234567?text=Hello%20Sherazi%20Solutions!%20I%20have%20an%20inquiry%20regarding%20mobile%20software%20service." 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="group flex items-center gap-2.5 px-4 py-3 rounded-full btn-whatsapp shadow-2xl transition-all hover:scale-105"
+      aria-label="Direct WhatsApp Chat"
+    >
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.771.88 2.796.88 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.767-5.767-5.767zm0 10.42c-.933 0-1.748-.28-2.548-.82l-.183-.124-1.579.414.421-1.54-.121-.192c-.595-.945-.91-1.666-.91-2.592 0-2.617 2.128-4.746 4.75-4.746 2.622 0 4.747 2.129 4.747 4.75 0 2.621-2.125 4.746-4.747 4.746z"/>
+      </svg>
+      <span class="text-xs font-bold hidden sm:inline">WhatsApp Us</span>
+    </a>
+  </div>
+
+  <!-- Inquiry Confirmation Modal -->
+  <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="glass-card rounded-3xl max-w-md w-full p-6 sm:p-8 border border-cyan-500/40 text-center space-y-4 shadow-2xl relative">
+      <div class="w-14 h-14 rounded-2xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-400 mx-auto flex items-center justify-center">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+
+      <h3 class="text-xl font-bold text-white">Inquiry Received!</h3>
+      
+      <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 font-mono-tech text-xs space-y-1">
+        <span class="text-slate-400">Diagnostic Ticket:</span>
+        <span id="modal-ticket-id" class="text-cyan-400 font-bold block text-sm">SS-849201</span>
+      </div>
+
+      <p id="modal-details-summary" class="text-xs text-slate-300 leading-relaxed"></p>
+
+      <p class="text-xs text-slate-400">
+        Our technician has received your ticket and will verify software firmware files. You can also send this inquiry directly to WhatsApp right now:
+      </p>
+
+      <div class="space-y-2 pt-2">
+        <a 
+          id="modal-wa-confirm-btn" 
+          href="#" 
+          target="_blank" 
+          class="btn-whatsapp w-full py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.771.88 2.796.88 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.767-5.767-5.767zm0 10.42c-.933 0-1.748-.28-2.548-.82l-.183-.124-1.579.414.421-1.54-.121-.192c-.595-.945-.91-1.666-.91-2.592 0-2.617 2.128-4.746 4.75-4.746 2.622 0 4.747 2.129 4.747 4.75 0 2.621-2.125 4.746-4.747 4.746z"/>
+          </svg>
+          Forward Ticket to WhatsApp
+        </a>
+
+        <button 
+          id="close-modal-btn" 
+          type="button" 
+          class="w-full py-2.5 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="fixed top-24 right-6 z-50 opacity-0 translate-y-10 pointer-events-none transition-all duration-300 max-w-sm">
+    <div class="glass-card rounded-2xl p-4 border border-cyan-500/40 shadow-2xl flex items-center gap-3 bg-[#0a0f1d]/95">
+      <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 shrink-0"></div>
+      <p id="toast-message" class="text-xs text-white font-medium"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
